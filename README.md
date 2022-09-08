@@ -4,7 +4,7 @@ This is the repo for BiBL (Bidirectional Bayesian Learning).
 ## Best Model Checkpoints
 
 Urls for best model checkpoints are not available during the review period due to the anonymity regulations.
-After the anonymity period, the model checkpoints will be released.
+The model checkpoints will be released right after we cleaned up all our available checkpoints.
 
 ## Instructions for Reproducing
 
