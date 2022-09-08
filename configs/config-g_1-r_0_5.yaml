@@ -1,0 +1,63 @@
+name: BiBLg_1r_05
+model: facebook/bart-large
+
+# <--------------
+# Linearizations
+# Comment DFS and uncomment the relevant block if you want to use a different linearization scheme
+
+# DFS
+penman_linearization: True
+use_pointer_tokens: True
+raw_graph: False
+
+seeds: 2022
+
+remove_wiki: False
+dereify: False
+collapse_name_ops: False
+
+# Hparams
+batch_size: 500
+beam_size: 1
+dropout: 0.25
+attention_dropout: 0.0
+smart_init: True
+accum_steps: 10
+warmup_steps: 1
+training_steps: 250000
+weight_decay: 0.004
+grad_norm: 2.5
+scheduler: constant
+learning_rate: 0.00001
+max_epochs: 30
+save_checkpoints: True
+log_wandb: False
+warm_start: True
+use_recategorization: False
+best_loss: False
+remove_longer_than: 1024
+
+# generation task
+use_lm_loss: True
+lm_loss_weight: 1.0
+# reconstruction task
+use_mask_loss: True
+mask_loss_weight: 0.5
+
+recap: False
+recap_ratio: 0.2
+recap_weight: 0.5
+gen_max_len: 500
+gen_beam_size: 100
+amr_mask_ratio: 0.5
+nl_mask_ratio: 0.5
+
+# <------------------
+# Data: replace DATA below with the root of your AMR 2/3 release folder
+train: amr2.0/data/amrs/split/training/*.txt
+dev: amr2.0/data/amrs/split/dev/*.txt
+test: amr2.0/data/amrs/split/test/*.txt
+
+# remember to create correpsonding tmp folders
+dev_gold: data/BiBLg_1r_0_5_tmp/dev-gold.txt
+dev_pred: data/BiBLg_1r_0_5_tmp/dev-pred.txt

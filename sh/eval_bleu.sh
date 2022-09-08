@@ -1,0 +1,2 @@
+# replace xxx with real data paths and ensure jamr_tokenized results are in the folders
+rm -rf eval_bleu.log; python bin/eval_bleu.py --in-tokens "./data/xxx/pred.text.txt.tok" --in-reference-tokens "./data/xxx/gold.text.txt.tok" > ./data/xxx/metrics 2>&1;
