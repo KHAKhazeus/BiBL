@@ -3,7 +3,7 @@ This is the repo for BiBL (Bidirectional Bayesian Learning).
 
 ## Best Model Checkpoints
 
-The model checkpoints will be released right after we cleaned up all our available checkpoints.
+Checkpoints are available here: https://mega.nz/file/U2hn3ZJQ#2VFNjPOho7fXagWr0zX_8Rny7BIT7XtHYMSc5po0Pps
 
 ## Instructions for Reproducing
 
